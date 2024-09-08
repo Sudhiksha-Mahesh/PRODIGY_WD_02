@@ -1,0 +1,128 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+  }
+  
+  .stopwatch {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #00ffcc;
+    text-shadow: 0 0 20px #00ffcc;
+    margin-bottom: 20px;
+  }
+  
+  #display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .time-box {
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 20px;
+    margin: 0 10px;
+    font-size: 3rem;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+    position: relative;
+    animation: borderAnimation 2s infinite linear;
+  }
+  
+  @keyframes borderAnimation {
+    0% {
+      border-color: #00ffcc;
+    }
+    25% {
+      border-color: #ff00ff;
+    }
+    50% {
+      border-color: #ff0000;
+    }
+    75% {
+      border-color: #ffff00;
+    }
+    100% {
+      border-color: #00ffcc;
+    }
+  }
+  
+  .time-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00ffcc, 0 0 40px #00cc99, 0 0 60px #00ffcc;
+  }
+  
+  .colon {
+    font-size: 3rem;
+    margin: 0 10px;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #00ffcc;
+    color: #121212;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button:hover {
+    background-color: #00cc99;
+    transform: scale(1.1);
+  }
+  
+  button:active {
+    transform: scale(1.05);
+  }
+  
+  #laps {
+    margin-top: 20px;
+  }
+  
+  #laps h2 {
+    color: #00ffcc;
+    text-shadow: 0 0 20px #00ffcc;
+  }
+  
+  #lapTimes {
+    list-style: none;
+  }
+  
+  #lapTimes li {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #333;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+    border-radius: 5px;
+  }
+  
